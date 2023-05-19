@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+<link href="./src/fontawesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+<style>
+    *, ::after, ::before{
+        box-sizing: border-box;
+    }
+    div{
+        display: block;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    ul li{
+        list-style-type: none;
+
+    }
+    a{
+        outline: 0px;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    a:link, a:visited {
+
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    i{
+        text-decoration: none;
+        font-style: normal;
+
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        
+        overflow: clip;
+        vertical-align: middle;
+        border-style: none;
+        overflow-clip-margin: content-box;
+    }
+    body{
+        font-family: STXihei;
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-x: hidden;
+        color: #888;
+        background-color: #F6F7FF;
+    }
+    .site{
+        width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header.left{
+        color: #FFF;
+        background: #4A63E7;
+        border-radius: 20px;
+        min-height: 620px;
+        max-height: 620px;
+        top:50px;
+        width: 265px;
+        position: fixed;
+        overflow: hidden;
+
+        transition: all 0.3s ease-in-out;
+    }
+    .float-left{
+        float: left!important;
+    }
+    .shadow-dark{
+        box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+    header.left.head-inner{
+        width: 100%;
+        padding: 30px;
+        position: absolute;
+    }
+
+    header.left .mCustomScrollBox{
+        width: 100%;
+        overflow: visible;
+    }
+
+    header.left .mCSB_inside >.mCSB_container{
+        margin-right: 0px;
+        min-height: 99.91%;
+        overflow: visible;
+        justify-content: end;
+        align-items: flex-start!important;
+        flex-direction: column!important;
+        display: flex!important;
+        width: auto;
+        height: auto;
+        margin-left: 3em;
+    }
+    header a{
+        color: #FFF;
+    }
+    header .site-title{
+        display: block;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .header-inner{
+        padding-top: 50px;
+    }
+    .mt-3{
+        margin-top: 1rem!important;
+    }
+    .img_loaded{
+        height: 70px;
+        width: 70px;
+        border-radius: 100%;
+    }
+    .vertical-menu{
+        font-size: 14px;
+        list-style: none;
+    }
+    .list{
+        padding-top: 40px;
+        margin: -30;
+    }
+    .header .vertical-menu li{
+        line-height: 2.5;
+        position: relative;
+    }
+    .txt{
+        padding-left: 10px;
+    }
+    .list-item{
+        padding-bottom: 20px;
+    }
+    .nav-link{     
+        transition: all 0.3s;
+    }
+    .nav-link:hover{
+        margin-left: 5px;
+    }
+    section{
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    .float-right{
+        float: right!important;
+    }
+    main{
+        display: block;
+    }
+
+    main.content{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 875px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    .course-card{
+        height: 600px;
+        width: 800px;
+        background-color: #F6F7FF;
+        margin: 10px;
+        border-radius: 20px;
+        transition: all 0.5s;
+
+    }
+    .course-card:hover{
+        width: 1000px;
+    }
+
+    .c-title{
+        text-align: center;
+    }
+    .jv-part{
+        width: 45%;
+        height: 450px;
+        display: inline-block;
+    }
+    .jv-part-ul{
+        font-size: 16px;
+        margin: 15px;
+    }
+    .jv-part-ul li{
+        margin-bottom: 18px;
+        color: #000;
+    }
+    .computer{
+        height: 1000px;    
+        
+    }
+    .com-part{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: flex-start;
+    }
+    .com-part div{
+        width: 40%;
+        height: 270px;
+        margin-bottom: 50px;  
+    }
+    
+</style>
+<body>
+    <div class="site">
+        <header class="left float-left shadow-dark">
+            <div class="header-inner">
+                <div class="mCustomScrollBox  mCSB_inside">
+                <div class="mCSB_container " style="position:relative;">
+                <a href="index.html">
+                    <img src="./src/img.jpg" alt="王钧" class="img_loaded">
+                </a>
+                <a href="index.html" class="site-title dot mt-3">王钧</a>
+                <span>2021 软件工程</span>
+                <nav class="list">
+                    <ul class="vertical-menu">
+                        <li class="list-item" >
+                            <a  href="/index.html" class="nav-link " >
+                                <i class="fa fa-home fa-lg"></i>
+                                <i class="txt">Home</i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/note.html" class="nav-link ">
+                                <i class="fa fa-pencil fa-lg"></i>
+                                <i class="txt">专业课程笔记</i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/course.html" class="nav-link ">
+                                <i class="fa fa-code fa-lg"></i>
+                                <i class="txt">我的专业课堂</i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/aboutme.html" class="nav-link ">
+                                <i class="fa fa-address-book-o fa-lg"></i>
+                                <i class="txt">About me</i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                </div>
+            </div>
+        </header>
+        
+        <main class="content float-right">
+            <div class="course-card shadow-dark javaweb">
+                <h1 class="c-title">JavaWeb</h1>
+                <hr>
+                <div style="display: flex;justify-content: center">
+                    <div class="jv-part" style="border-right-width: 4px;border-right-color: #f7f7f7;border-right-style: solid; ">
+                    <div >
+                        <img src="/src/java.png"><i style="font-size: 18px;line-height: 32px;margin-left: 7px;">后端</i>
+                        <ul class="jv-part-ul" >
+                            <li>Java EE</li>
+                            <li>JavaWeb入门</li>
+                            <li>Servlet基础</li>
+                            <li>会话</li>
+                            <li>JSTL</li>
+                            <li>JavaBean</li>
+                            <li>监听器/过滤器</li>
+                            <li>MVC</li>
+                            <li>AJAX</li>
+                            <li>JDBC</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="jv-part">
+                        <div style="margin-left: 30px;">
+                            <img src="/src/web.png"><i style="font-size: 18px;line-height: 32px;margin-left: 7px;">前端</i>
+                            <ul class="jv-part-ul" >
+                                <li>HTML基础</li>
+                                <li>表格与框架</li>
+                                <li>表单</li>
+                                <li>CSS基础</li>
+                                <li>CSS页面布局</li>
+                                <li>JS基础</li>
+                                <li>JS对象</li>
+                                <li>DOM与BOM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card shadow-dark computer" >
+                <h1 class="c-title">计算机组成原理</h1>
+                <hr>
+                <div class="com-part">
+                    <div >
+                        <img src="/src/sharpicons_notebooks.png" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">计算机基础</p>
+                        <p>信息的数字化表示、存储程序与冯诺依曼体制；计算机的诞生和发展；计算机系统的层次结构和硬件系统组织；计算机的主要性能指标。</p>
+                    </div>
+                    <div>
+                        <img src="/src/运算.png" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">运算器</p>
+                        <p>数值型和字符型数据的表示，数据的运算方法，奇偶校验等常用的数据校验方法。</p>
+                    </div>
+                    <div>
+                        <img src="/src/sharpicons_floppy-disc.png" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">储存系统</p>
+                        <p>存储系统的层次和存储器的类型及技术指标，半导体存储原理及存储器，磁表面存储原理及磁盘，光存储原理及器件，存储系统性能的改进措施。</p>
+                    </div>
+                    <div>
+                        <img src="/src/sharpicons_processor.png" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">指令系统</p>
+                        <p>CPU的结构和发展历程，指令系统，MIPS32指令集，单周期和多周期MIPS32处理器设计，提升CPU性能的一些高级技术，如多核技术等。</p>
+                    </div>
+                    <div>
+                        <img src="/src/sharpicons_hdd.png" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">IO系统</p>
+                        <p>主要讲授I/O设备的功能、类型及与主机之间的信息交互，键盘工作原理，显示器件，打印设备等。</p>
+                    </div>
+                    <div></div>
+                
+                </div>
+            </div>
+            <div class="course-card shadow-dark" style="height: 800px;">
+                <h1 class="c-title">机器学习</h1>
+                <hr>
+                <div class="com-part" ">
+                    <div >
+                        <img src="/src/xxhg.jpg" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">线性回归</p>
+                        
+                    </div>
+                    <div>
+                        <img src="/src/bys.jpg" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">朴素贝叶斯</p>
+                        
+                    </div>
+                    <div>
+                        <img src="/src/jcs.jpg" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">决策树</p>
+                        
+                    </div>
+                    <div>
+                        <img src="/src/sjwl.jpg"style="height: 243px;" >
+                        <p style="font-size: 18px;font-weight: bold;color: #000000;margin-top: 15px;">神经网络</p>
+                        
+                    </div>
+
+                
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link href="./src/fontawesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+<style>
+    *, ::after, ::before{
+        box-sizing: border-box;
+    }
+    div{
+        display: block;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    ul li{
+        list-style-type: none;
+
+    }
+    a{
+        outline: 0px;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    a:link, a:visited {
+
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    i{
+        text-decoration: none;
+        font-style: normal;
+
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        
+        overflow: clip;
+        vertical-align: middle;
+        border-style: none;
+        overflow-clip-margin: content-box;
+    }
+    body{
+        font-family: STXihei;
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-x: hidden;
+        color: #888;
+        background-color: #F6F7FF;
+    }
+    .site{
+        width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header.left{
+        color: #FFF;
+        background: #4A63E7;
+        border-radius: 20px;
+        min-height: 620px;
+        max-height: 620px;
+        top:50px;
+        width: 265px;
+        position: fixed;
+        overflow: hidden;
+
+        transition: all 0.3s ease-in-out;
+    }
+    .float-left{
+        float: left!important;
+    }
+    .shadow-dark{
+        box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+    header.left.head-inner{
+        width: 100%;
+        padding: 30px;
+        position: absolute;
+    }
+
+    header.left .mCustomScrollBox{
+        width: 100%;
+        overflow: visible;
+    }
+
+    header.left .mCSB_inside >.mCSB_container{
+        margin-right: 0px;
+        min-height: 99.91%;
+        overflow: visible;
+        justify-content: end;
+        align-items: flex-start!important;
+        flex-direction: column!important;
+        display: flex!important;
+        width: auto;
+        height: auto;
+        margin-left: 3em;
+    }
+    header a{
+        color: #FFF;
+    }
+    header .site-title{
+        display: block;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .header-inner{
+        padding-top: 50px;
+    }
+    .mt-3{
+        margin-top: 1rem;
+    }
+    .img_loaded{
+        height: 70px;
+        width: 70px;
+        border-radius: 100%;
+    }
+    .vertical-menu{
+        font-size: 14px;
+        list-style: none;
+    }
+    .list{
+        padding-top: 40px;
+        margin: -30;
+    }
+    .header .vertical-menu li{
+        line-height: 2.5;
+        position: relative;
+    }
+    .txt{
+        padding-left: 10px;
+    }
+    .list-item{
+        padding-bottom: 20px;
+        display: block;
+        
+    }
+    .nav-link{     
+        transition: all 0.3s;
+    }
+    .nav-link:hover{
+        margin-left: 5px;
+    }
+    main.content{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 875px;
+    }
+    section{
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    .float-right{
+        float: right!important;
+    }
+    main{
+        display: block;
+    }
+    .hero{
+        height: 620px;
+        margin-top: 0;
+        background-color: #FFF;
+    }
+    .parallax{
+        background-size:contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+</style>
+<body>
+    <div class="site">
+        <header class="left float-left shadow-dark">
+            <div class="header-inner">
+                <div class="mCustomScrollBox  mCSB_inside">
+                <div class="mCSB_container " style="position:relative;">
+                <a href="index.html">
+                    <img src="./src/img.jpg" alt="王钧" class="img_loaded">
+                </a>
+                <a href="index.html" class="site-title dot mt-3">王钧</a>
+                <span>2021 软件工程</span>
+                <nav class="list">
+                    <ul class="vertical-menu">
+                        <li class="list-item" >
+                            <a  href="/index.html" class="nav-link " >
+                                <i class="fa fa-home fa-lg"></i>
+                                <i class="txt">Home</i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/note.html" class="nav-link ">
+                                <i class="fa fa-pencil fa-lg"></i>
+                                <i class="txt">专业课程笔记</i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/course.html" class="nav-link ">
+                                <i class="fa fa-code fa-lg"></i>
+                                <i class="txt">我的专业课堂</i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="/aboutme.html" class="nav-link ">
+                                <i class="fa fa-address-book-o fa-lg"></i>
+                                <i class="txt">About me</i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                </div>
+            </div>
+        </header>
+        
+        <main class="content float-right">
+            <section id="home" class="hero parallax shadow-dark" style="background-image: url(./src/ysu.jpg);">
+            </section>
+        </main>
+    </div>
+</body>
+</html>
